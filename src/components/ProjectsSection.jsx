@@ -7,8 +7,8 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Nextjs Portafolio Website",
+    description: "Reflejo creativo: logros, habilidades y pasión visualizada online.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,8 +16,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "React App de comida ",
+    description: "Pedidos rápidos, menú tentador, entrega eficiente, satisfacción garantizada.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -25,8 +25,8 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "ciencia de datos en python",
+    description: "DashBoard en python y SQLserver ",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -34,8 +34,8 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "Application de comida",
+    description: "Aplicacion de pedidos de alimentos en react native",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
@@ -44,7 +44,7 @@ const projectsData = [
   {
     id: 5,
     title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    description: "Operaciones de autenticación y CRUD",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -52,8 +52,8 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "APi de clima",
+    description: "API en flask usando python",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "/",

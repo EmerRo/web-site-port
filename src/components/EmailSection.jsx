@@ -17,7 +17,7 @@ const EmailSection = () => {
   const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      emailjs.sendForm('service_f59c9dl', 'template_6zl065p', formRef.current, 'lqv22h9KQXYE6IyOz')
         .then((result) => {
           setSuccess(true)
       }, (error) => {
