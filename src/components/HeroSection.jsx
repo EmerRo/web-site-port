@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
+import hero from '../../public/images/hero-image.png'
 
 const HeroSection = () => {
   return (
@@ -47,7 +48,7 @@ const HeroSection = () => {
       <div className='col-span-4 place-self-center mt-4 lg:mt-0' >
          <div className="rounded-full bg-[#111827] w-[350px] h-[350px] lg:w-[350px] lg:h-[350px] relative">
             <Image
-              src="./images/hero-image.png"
+              src={hero}
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
