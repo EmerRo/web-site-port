@@ -4,12 +4,14 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+
+
 const projectsData = [
   {
     id: 1,
     title: "Nextjs Portafolio Website",
     description: "Reflejo creativo: logros, habilidades y pasión visualizada online.",
-    image: "./images/projects/1.png",
+    image:'/images/projects/1.png',
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
@@ -18,7 +20,7 @@ const projectsData = [
     id: 2,
     title: "React App de comida ",
     description: "Pedidos rápidos, menú tentador, entrega eficiente, satisfacción garantizada.",
-    image: "./images/projects/2.png",
+    image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
@@ -27,7 +29,7 @@ const projectsData = [
     id: 3,
     title: "ciencia de datos en python",
     description: "DashBoard en python y SQLserver ",
-    image: "./images/projects/3.png",
+    image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
@@ -36,7 +38,7 @@ const projectsData = [
     id: 4,
     title: "Application de comida",
     description: "Aplicacion de pedidos de alimentos en react native",
-    image: "./images/projects/4.png",
+    image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
@@ -45,7 +47,7 @@ const projectsData = [
     id: 5,
     title: "React Firebase Template",
     description: "Operaciones de autenticación y CRUD",
-    image: "./images/projects/5.png",
+    image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
@@ -54,7 +56,7 @@ const projectsData = [
     id: 6,
     title: "APi de clima",
     description: "API en flask usando python",
-    image: "./images/projects/6.png",
+    image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
