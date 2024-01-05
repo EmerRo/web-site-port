@@ -47,7 +47,7 @@ const HeroSection = () => {
       <div className='col-span-4 place-self-center mt-4 lg:mt-0' >
          <div className="rounded-full bg-[#111827] w-[350px] h-[350px] lg:w-[350px] lg:h-[350px] relative">
             <Image
-              src="./images/hero-image.png"
+              src="https://res-console.cloudinary.com/dqpjzyd6p/media_explorer_thumbnails/b7d536ca2d8723a1464c3946be960f36/detailed"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}

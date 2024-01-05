@@ -55,7 +55,7 @@ const AboutSection = () => {
   return (
     <section className='text-white' id="about" >
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16' > 
-            <Image src="/images/about-image.png" width={400} height={400}/>
+            <Image src="https://res-console.cloudinary.com/dqpjzyd6p/media_explorer_thumbnails/334783050612a9aaf85f9a6e65befe99/detailed" width={400} height={400}/>
             <div className='mt-4 md:mt-0 text-lef flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4 '> Acerca de mí </h2>
 
