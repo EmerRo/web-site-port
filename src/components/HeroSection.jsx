@@ -21,13 +21,13 @@ const HeroSection = () => {
         //  La misma subcadena al inicio solo se escribirá una vez, inicialmente 
         'Programador',
         1000, //espera 1 segundo antes de reemplazar "Ratones" con "Hámsters"
-        'Fron-end',
+        'Junior',
+        1000,
+        'Front-end',
         1000,
         'Back-end',
         1000,
-        'Junior',
-        1000,
-        'Database',
+        'developer',
         1000
       ]}
       wrapper="span"
