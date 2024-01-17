@@ -4,7 +4,9 @@ import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
 import hero from '../../public/images/hero-image.png'
 
+
 const HeroSection = () => {
+ 
   return (
   <section className='lg:py-16 '>
     <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -40,7 +42,10 @@ const HeroSection = () => {
       </p> 
       <div>
 
-        <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br bg-cyan-500 shadow-lg shadow-cyan-500/50 ... hover:bg-slate-200 text-black font-bold '>Mirar CV</button>
+        <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br bg-cyan-500 shadow-lg shadow-cyan-500/50 ... hover:bg-slate-200 text-black font-bold ' onClick={()=>{
+          open("https://drive.google.com/file/d/1DPe_BlieDpIGekMdUU1prCRaMToPPmml/view?usp=sharing")
+        
+        }}>Mirar CV</button>
 
        
       </div>

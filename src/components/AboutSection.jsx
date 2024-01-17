@@ -61,7 +61,7 @@ const AboutSection = () => {
                 <h2 className='text-4xl font-bold text-white mb-4 '> Acerca de mí </h2>
 
                 <p className='text-base lg:text-lg '>
-                ¡Hola, soy Rodrigo yarleque! tengo 19 años soy Un entusiasta programador que encuentra belleza en cada línea de código. Mi viaje en el desarrollo de software es un emocionante capítulo de aprendizaje constante y pasión por crear soluciones digitales innovadoras.
+                ¡Hola, soy Rodrigo Yarleque! tengo 20 años soy Un entusiasta programador que encuentra belleza en cada línea de código. Mi viaje en el desarrollo de software es un emocionante capítulo de aprendizaje constante y pasión por crear soluciones digitales innovadoras.
                      </p>
                      <div className='flex flex-row justify-start mt-8 z-30'>
                         <TabButton 
