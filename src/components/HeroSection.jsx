@@ -43,7 +43,7 @@ const HeroSection = () => {
       <div>
 
         <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br bg-cyan-500 shadow-lg shadow-cyan-500/50 ... hover:bg-slate-200 text-black font-bold ' onClick={()=>{
-          open("https://drive.google.com/file/d/1DPe_BlieDpIGekMdUU1prCRaMToPPmml/view?usp=sharing")
+          open("https://drive.google.com/file/d/1xUaTWtuGxWBGGiXIHi2j9r4SsBNDKmGx/view")
         
         }}>Mirar CV</button>
 
