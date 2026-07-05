@@ -10,6 +10,7 @@
     "deploy": "gh-pages -d .next"
   },
   "dependencies": {
+    "@dataconnect/generated": "file:src/dataconnect-generated",
     "@emailjs/browser": "^3.11.0",
     "@heroicons/react": "^2.0.18",
     "@react-three/drei": "^9.92.7",
