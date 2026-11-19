@@ -4,62 +4,71 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+const shot = (name) => `./images/projects/${name}.webp`;
+const shots = (names) => names.map(shot);
 
-
+// Projects without `previewUrl` are private/confidential client work: no link is published.
 const projectsData = [
   {
     id: 1,
-    title: "Nextjs Portafolio Website",
-    description: "Reflejo creativo: logros, habilidades y pasión visualizada online.",
-    image:'./images/projects/1.png',
+    title: "Delivery TrueLove",
+    description:
+      "Plataforma de delivery con panel de administración para gestionar negocios, promociones, horarios y calificaciones.",
+    images: shots(["truelove-1", "truelove-2", "truelove-3"]),
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://www.deliverytruelove.com",
   },
   {
     id: 2,
-    title: "React App de comida ",
-    description: "Pedidos rápidos, menú tentador, entrega eficiente, satisfacción garantizada.",
-    image: "./images/projects/2.png",
+    title: "7Power",
+    description:
+      "Tienda en línea de audio para auto: autoradios, amplificadores, subwoofers y más, con catálogo por categorías y marcas, favoritos y carrito.",
+    images: shots(["7power-1"]),
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://7power.pe",
   },
   {
     id: 3,
-    title: "ciencia de datos en python",
-    description: "DashBoard en python y SQLserver ",
-    image: "./images/projects/3.png",
+    title: "RyS Total Clean",
+    description:
+      "Sitio corporativo de limpieza, saneamiento y mantenimiento, con catálogo de productos, blog y solicitud de cotización.",
+    images: shots(["rys-1", "rys-2"]),
+    phone: shot("rys-2"),
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://rystotalclean.com",
   },
   {
     id: 4,
-    title: "Application de comida",
-    description: "Aplicacion de pedidos de alimentos en react native",
-    image: "./images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Sistema de ventas para ferretería",
+    description:
+      "Punto de venta e inventario: dashboard de ventas, comprobantes (boletas, facturas y notas de venta), kardex, créditos y cotizaciones.",
+    images: shots(["redentor-1", "redentor-2", "redentor-3"]),
+    tag: ["All", "Web"],
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Operaciones de autenticación y CRUD",
-    image: "./images/projects/5.png",
+    title: "Ecotrack",
+    description:
+      "ERP modular para gestión de residuos sólidos: ventas, logística, tesorería, órdenes de trabajo, recursos humanos y flota.",
+    images: shots(["ecotrack-1", "ecotrack-2"]),
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
   },
   {
     id: 6,
-    title: "APi de clima",
-    description: "API en flask usando python",
-    image: "./images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "ArequipaGo + CrediGo",
+    description:
+      "Plataforma de movilidad y financiamiento: panel administrativo (flota, conductores, cuotas, beneficios y fidelización) y app móvil para conductores.",
+    images: shots([
+      "arequipago-1",
+      "arequipago-2",
+      "arequipago-3",
+      "credigo-1",
+      "credigo-2",
+      "credigo-3",
+      "credigo-4",
+    ]),
+    phone: shot("credigo-2"),
+    tag: ["All", "Web", "Mobile"],
   },
 ];
 
@@ -82,7 +91,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="z-30">
+    <section id="projects" className="relative z-30">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12 ">
         My Projects
       </h2>
@@ -90,7 +99,7 @@ const ProjectsSection = () => {
         <ProjectTag
           onClick={handleTagChange}
           name="All"
-          isSelected={tag === "Todos"}
+          isSelected={tag === "All"}
         />
         <ProjectTag
           onClick={handleTagChange}
@@ -106,18 +115,17 @@ const ProjectsSection = () => {
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 ">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
+              images={project.images}
+              phone={project.phone}
               previewUrl={project.previewUrl}
             />
           </motion.li>

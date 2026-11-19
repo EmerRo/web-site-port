@@ -2,6 +2,8 @@
 import React, { useState, useRef } from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
+import WhatsappIcon from "../../public/whatsapp-icon.svg";
+import { WHATSAPP_URL } from "./WhatsAppIcon";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
@@ -47,6 +49,9 @@ const EmailSection = () => {
           </Link>
           <Link href="https://www.linkedin.com/in/rodrigo-yarleque-2077b8295/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </Link>
+          <Link href={WHATSAPP_URL}>
+            <Image src={WhatsappIcon} alt="WhatsApp Icon" />
           </Link>
         </div>
       </div>

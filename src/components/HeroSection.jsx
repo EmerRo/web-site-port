@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation';
 import hero from '../../public/images/hero-image.png'
+import WhatsAppIcon, { WHATSAPP_URL } from './WhatsAppIcon'
 
 
 const HeroSection = () => {
@@ -40,12 +41,22 @@ const HeroSection = () => {
       <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl ' >
       Desarrollador web junior apasionado por la creación digital. Explora mis proyectos y descubre mi potencial.
       </p> 
-      <div>
+      <div className='flex flex-col sm:flex-row gap-3'>
 
-        <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br bg-cyan-500 shadow-lg shadow-cyan-500/50 ... hover:bg-slate-200 text-black font-bold ' onClick={()=>{
-          open("https://drive.google.com/file/d/1xUaTWtuGxWBGGiXIHi2j9r4SsBNDKmGx/view")
+        <button className='px-6 py-3 w-full sm:w-fit rounded-full bg-gradient-to-br bg-cyan-500 shadow-lg shadow-cyan-500/50 ... hover:bg-slate-200 text-black font-bold ' onClick={()=>{
+          open("https://drive.google.com/file/d/1ZUC6l8oImtKIVF_qEix8ZSXEbslIc9tc/view?usp=sharing")
         
         }}>Mirar CV</button>
+
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className='inline-flex items-center justify-center gap-2 px-6 py-3 w-full sm:w-fit rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/50 hover:bg-slate-200 text-black font-bold'
+        >
+          <WhatsAppIcon className='h-6 w-6' />
+          WhatsApp
+        </a>
 
        
       </div>
@@ -57,7 +68,7 @@ const HeroSection = () => {
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
-              height={300}
+              priority
             />
           </div>
          </div>
