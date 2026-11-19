@@ -20,7 +20,7 @@ const HeroSection = () => {
         <TypeAnimation 
       sequence={[
         //  La misma subcadena al inicio solo se escribirá una vez, inicialmente 
-        'Programador',
+        'Full Stack',
         1000, //espera 1 segundo antes de reemplazar "Ratones" con "Hámsters"
         'Junior',
         1000,
@@ -28,7 +28,7 @@ const HeroSection = () => {
         1000,
         'Back-end',
         1000,
-        'developer',
+        'Developer',
         1000
       ]}
       wrapper="span"
@@ -39,7 +39,7 @@ const HeroSection = () => {
 
       </h1>
       <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl ' >
-      Desarrollador web junior apasionado por la creación digital. Explora mis proyectos y descubre mi potencial.
+      Desarrollador full stack junior apasionado por crear productos digitales que resuelven necesidades reales. Explora mis proyectos y descubre mi potencial.
       </p> 
       <div className='flex flex-col sm:flex-row gap-3'>
 

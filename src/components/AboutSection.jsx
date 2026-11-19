@@ -4,46 +4,89 @@ import Image from 'next/image'
 import TabButton from './TabButton'
 import about from '../../public/images/about-image.png'
 
+// Content comes from the CV (public/pdf/CV Rodrigo Yarleque.pdf).
 const TAB_DATA=[
     {
-        title: "Skills",
         id: "skills",
-        content:(
-            <ul className='list-disc pl-2'>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Django</li>
-                <li>Nextjs</li>
-                <li>React</li>
-
-            </ul>
-        ),
+        label: "Habilidades",
+        groups: [
+            {
+                items: [
+                    "Desarrollo Frontend con frameworks de JavaScript",
+                    "Desarrollo Backend con JavaScript",
+                    "Diseño, consumo e implementación de APIs",
+                    "Diseño y gestión de bases de datos",
+                    "Control de versiones con Git y GitHub",
+                    "Experiencia en desarrollo de servicios SaaS",
+                ],
+            },
+            {
+                title: "Perfil",
+                items: [
+                    "Conocimiento en metodologías ágiles",
+                    "Buena resolución de problemas y habilidades analíticas",
+                    "Investigador de nuevas tecnologías de desarrollo",
+                    "Nivel de inglés intermedio",
+                    "Persona autodidacta",
+                ],
+            },
+        ],
     },
     {
-        title: "Education",
-        id :"education",
-        content: (
-            <ul className='list-disc pl-2'>
-                 <li>Javascript</li>
-                <li>Python</li>
-                <li>java</li>
-                
-            </ul>
-        ),
+        id: "technologies",
+        label: "Tecnologías",
+        groups: [
+            {
+                items: [
+                    "JavaScript",
+                    "React",
+                    "Next.js",
+                    "Astro",
+                    "Tailwind CSS",
+                    "Docker",
+                    "Firebase",
+                ],
+            },
+        ],
     },
     {
-        title:'Certifications',
-        id: 'certifications',
-        content:(
-            <ul className='list-disc pl-2'>
-               <li>Sql Server</li>
-                <li>Mysql</li>
-                <li>MongoDB</li>
-            </ul>
-        ),
-
+        id: "databases",
+        label: "Bases de datos",
+        groups: [
+            {
+                items: ["MySQL", "MongoDB", "PostgreSQL"],
+            },
+        ],
+    },
+    {
+        id: "education",
+        label: "Educación",
+        groups: [
+            {
+                items: [
+                    "Técnico en computación e informática, Instituto Superior Hermanos Cárcamo",
+                    "Cisco Networking Academy: Python",
+                    "Cursos en Platzi, freeCodeCamp y Oracle Academy",
+                ],
+            },
+        ],
     },
 ]
+
+const TabContent = ({groups}) =>
+    groups.map((group,index) => (
+        <div key={index} className={index > 0 ? 'mt-4' : ''}>
+            {group.title && (
+                <h3 className='font-semibold text-white mb-2'>{group.title}</h3>
+            )}
+            <ul className='list-disc pl-5'>
+                {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                ))}
+            </ul>
+        </div>
+    ))
+
 const AboutSection = () => {
     const [tab,setTab]=useState('skills')
     const [isPending,startTransition]=useTransition()
@@ -55,39 +98,29 @@ const AboutSection = () => {
     }
   return (
     <section className='text-white' id="about" >
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16' > 
+        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16' >
             <Image src={about} alt="Ilustración de una laptop sobre un escritorio" width={400} height={400}/>
             <div className='mt-4 md:mt-0 text-lef flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4 '> Acerca de mí </h2>
 
                 <p className='text-base lg:text-lg '>
-                ¡Hola, soy Rodrigo Yarleque! tengo 20 años soy Un entusiasta programador que encuentra belleza en cada línea de código. Mi viaje en el desarrollo de software es un emocionante capítulo de aprendizaje constante y pasión por crear soluciones digitales innovadoras.
+                ¡Hola, soy Emer Rodrigo Yarleque! Desarrollador full stack junior con amplios conocimientos en el desarrollo de aplicaciones web y móviles. Cuento con sólidos conocimientos en JavaScript, React, gestión de bases de datos y control de versiones. Me apasiona implementar buenas prácticas de programación y crear productos digitales de alto valor que resuelvan necesidades reales de los usuarios.
                      </p>
-                     <div className='flex flex-row justify-start mt-8 z-30'>
-                        <TabButton 
-                        selecTab={()=> handleTabChange("skills")} 
-                        active={tab==="skills"}
-                        >
-                        {" "}
-                        Habilidades{" "}
-                        </TabButton>
-                        <TabButton 
-                        selecTab={()=> handleTabChange("education")} 
-                        active={tab==="education"}
-                        >
-                        {" "}
-                        Lenguajes{" "}
-                        </TabButton>
-                        <TabButton 
-                        selecTab={()=> handleTabChange("certifications")} 
-                        active={tab==="certifications"}
-                        >
-                        {" "}
-                        Dase de Datos{" "}
-                        </TabButton>
+                     <div className='flex flex-row flex-wrap gap-y-2 justify-start mt-8 z-30'>
+                        {TAB_DATA.map((item) => (
+                            <TabButton
+                            key={item.id}
+                            selecTab={()=> handleTabChange(item.id)}
+                            active={tab===item.id}
+                            >
+                            {item.label}
+                            </TabButton>
+                        ))}
                      </div>
 
-                     <div className='mt-8'>{TAB_DATA.find((t) => t.id===tab).content}</div>
+                     <div className='mt-8'>
+                        <TabContent groups={TAB_DATA.find((t) => t.id===tab).groups} />
+                     </div>
             </div>
         </div>
     </section>
